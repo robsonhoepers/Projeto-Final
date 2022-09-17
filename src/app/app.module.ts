@@ -20,6 +20,7 @@ import { Erro404Component } from './pages/erro404/erro404.component';
 import { DadosusuarioComponent } from './pages/dadosusuario/dadosusuario.component';
 import { AdministrativoComponent } from './pages/administrativo/administrativo.component';
 import { RelatoriocompraComponent } from './pages/relatoriocompra/relatoriocompra.component';
+import { AuthGuard } from './services/auth/auth.guard';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,7 @@ import { RelatoriocompraComponent } from './pages/relatoriocompra/relatoriocompr
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
