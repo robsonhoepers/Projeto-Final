@@ -26,6 +26,8 @@ import { GinComponent } from './pages/gin/gin.component';
 import { CervejaComponent } from './pages/cerveja/cerveja.component';
 import { VodkaComponent } from './pages/vodka/vodka.component';
 import { CachacaComponent } from './pages/cachaca/cachaca.component';
+import { KitsComponent } from './pages/kits/kits.component';
+import { ContatoComponent } from './pages/contato/contato.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { CachacaComponent } from './pages/cachaca/cachaca.component';
     GinComponent,
     CervejaComponent,
     VodkaComponent,
-    CachacaComponent
+    CachacaComponent,
+    KitsComponent,
+    ContatoComponent
   ],
   imports: [
     BrowserModule,
