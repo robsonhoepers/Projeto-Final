@@ -1,3 +1,82 @@
 .clHeader{
     background:   #710000;
   }
+  
+.clKits{
+  margin-left: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.clKits:hover{
+  -webkit-filter: drop-shadow(5px 10px 5px rgba(0,0,0,.5));
+  filter: drop-shadow(5px 10px 5px rgba(0,0,0,.5));
+}
+.clContato{
+  margin-left: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.clContato:hover{
+  -webkit-filter: drop-shadow(5px 10px 5px rgba(0,0,0,.5));
+  filter: drop-shadow(5px 10px 5px rgba(0,0,0,.5));
+}
+
+.clBarra{
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.clBarra:hover{
+  
+  -webkit-filter: drop-shadow(5px 10px 5px rgba(0,0,0,.5));
+  filter: drop-shadow(5px 10px 5px rgba(0,0,0,.5));
+
+}
+.dp-menu ul {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  list-style-type: none;
+  padding: 25;
+  margin-left: 100px;
+  font-family: DM Sans;
+  font-weight:bolder;
+  text-shadow: 0.010em 0.04rem #6e6e6e;
+  font-size: 22px;
+}
+
+.dp-menu ul li {
+  display: inline;
+  position: relative;
+}
+
+.dp-menu ul li a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+ 
+}
+
+.dp-menu ul ul {
+  display: none;
+  margin-top: 2px;
+  margin-left: 10px;
+  font-size: 18px;
+  position: absolute;
+}
+
+.dp-menu ul li:hover ul {
+  display: block;
+}
+.clIcone{
+  transition: all 0.5s;
+  cursor: pointer;
+  position: absolute;
+  left: 1050px;
+  
+}
+.clIcone:hover{
+  
+  -webkit-filter: drop-shadow(5px 10px 5px rgba(0,0,0,.5));
+  filter: drop-shadow(5px 10px 5px rgba(0,0,0,.5));
+
+}
