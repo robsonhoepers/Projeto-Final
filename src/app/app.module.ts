@@ -21,6 +21,11 @@ import { DadosusuarioComponent } from './pages/dadosusuario/dadosusuario.compone
 import { AdministrativoComponent } from './pages/administrativo/administrativo.component';
 import { RelatoriocompraComponent } from './pages/relatoriocompra/relatoriocompra.component';
 import { AuthGuard } from './services/auth/auth.guard';
+import { DadosempresaComponent } from './pages/dadosempresa/dadosempresa.component';
+import { GinComponent } from './pages/gin/gin.component';
+import { CervejaComponent } from './pages/cerveja/cerveja.component';
+import { VodkaComponent } from './pages/vodka/vodka.component';
+import { CachacaComponent } from './pages/cachaca/cachaca.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +44,12 @@ import { AuthGuard } from './services/auth/auth.guard';
     Erro404Component,
     DadosusuarioComponent,
     AdministrativoComponent,
-    RelatoriocompraComponent
+    RelatoriocompraComponent,
+    DadosempresaComponent,
+    GinComponent,
+    CervejaComponent,
+    VodkaComponent,
+    CachacaComponent
   ],
   imports: [
     BrowserModule,

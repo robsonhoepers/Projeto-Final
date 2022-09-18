@@ -16,6 +16,11 @@ import { Erro404Component } from './pages/erro404/erro404.component';
 import { DadosusuarioComponent } from './pages/dadosusuario/dadosusuario.component';
 import { AdministrativoComponent } from './pages/administrativo/administrativo.component';
 import { RelatoriocompraComponent } from './pages/relatoriocompra/relatoriocompra.component';
+import { GinComponent } from './pages/gin/gin.component';
+import { CervejaComponent } from './pages/cerveja/cerveja.component';
+import { CachacaComponent } from './pages/cachaca/cachaca.component';
+import { VodkaComponent } from './pages/vodka/vodka.component';
+import { DadosempresaComponent } from './pages/dadosempresa/dadosempresa.component';
 
 
 const routes: Routes = [
@@ -30,6 +35,11 @@ const routes: Routes = [
   {path: 'carrinhocompra', component: CarrinhocompraComponent},
   {path: 'finalizarcompra', component: FinalizarcompraComponent},
   {path: 'dadosusuario', component: DadosusuarioComponent},
+  {path: 'gin', component: GinComponent},
+  {path: 'cerveja', component: CervejaComponent},
+  {path: 'cachaca', component: CachacaComponent},
+  {path: 'vodka', component: VodkaComponent},
+  {path: 'dadosempresa', component: DadosempresaComponent},
   {path: 'relatoriocompras', component: RelatoriocompraComponent},
   {path: '**', component: Erro404Component}
 ];
