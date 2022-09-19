@@ -80,3 +80,8 @@
   filter: drop-shadow(5px 10px 5px rgba(0,0,0,.5));
 
 }
+.clLogo{
+  position: absolute;
+  padding-top: 10px;
+  padding-left: 10px;
+}
