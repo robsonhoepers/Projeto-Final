@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -21,6 +21,9 @@ import { CervejaComponent } from './pages/cerveja/cerveja.component';
 import { CachacaComponent } from './pages/cachaca/cachaca.component';
 import { VodkaComponent } from './pages/vodka/vodka.component';
 import { DadosempresaComponent } from './pages/dadosempresa/dadosempresa.component';
+import { combineLatest } from 'rxjs';
+import { KitsComponent } from './pages/kits/kits.component';
+import { ContatoComponent } from './pages/contato/contato.component';
 
 
 const routes: Routes = [
@@ -39,6 +42,8 @@ const routes: Routes = [
   {path: 'cervejas', component: CervejaComponent},
   {path: 'cachacas', component: CachacaComponent},
   {path: 'vodka', component: VodkaComponent},
+  {path: 'kits', component: KitsComponent},
+  {path: 'contato', component: ContatoComponent},
   {path: 'dadosempresa', component: DadosempresaComponent},
   {path: 'relatoriocompras', component: RelatoriocompraComponent},
   {path: '**', component: Erro404Component}
