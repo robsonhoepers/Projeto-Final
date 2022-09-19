@@ -30,6 +30,8 @@ import { VodkaComponent } from './pages/vodka/vodka.component';
 import { CachacaComponent } from './pages/cachaca/cachaca.component';
 import { KitsComponent } from './pages/kits/kits.component';
 import { ContatoComponent } from './pages/contato/contato.component';
+import { CarrosselComponent } from './pages/carrossel/carrossel.component';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 
 @NgModule({
@@ -56,7 +58,8 @@ import { ContatoComponent } from './pages/contato/contato.component';
     VodkaComponent,
     CachacaComponent,
     KitsComponent,
-    ContatoComponent
+    ContatoComponent,
+    CarrosselComponent
     
   ],
   imports: [
@@ -65,7 +68,8 @@ import { ContatoComponent } from './pages/contato/contato.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    IvyCarouselModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]
