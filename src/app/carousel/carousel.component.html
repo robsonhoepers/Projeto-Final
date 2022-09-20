@@ -1,4 +1,4 @@
-dfgadfg
+
 <div *ngIf="images && images.length > 0" class="carousel-container">
     <img *ngFor="let image of images; let i=index"
         [src]="image.imageSrc" [alt]="image.imageAlt"
@@ -10,7 +10,6 @@ dfgadfg
                     [ngClass]="{'active': selectedIndex === i}"
                     (click)="selectImage(i)"
                     >
-
             </span>
         </div>
         <button *ngIf="controls" class="btn-carousel btn-prev" 
