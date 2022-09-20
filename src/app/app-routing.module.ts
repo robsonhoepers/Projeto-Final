@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { combineLatest } from 'rxjs';
 
 import { AuthGuard } from './services/auth/auth.guard';
 import { ConfirmacaoidadeComponent } from './pages/confirmacaoidade/confirmacaoidade.component';
@@ -21,7 +22,7 @@ import { CervejaComponent } from './pages/cerveja/cerveja.component';
 import { CachacaComponent } from './pages/cachaca/cachaca.component';
 import { VodkaComponent } from './pages/vodka/vodka.component';
 import { DadosempresaComponent } from './pages/dadosempresa/dadosempresa.component';
-import { combineLatest } from 'rxjs';
+
 import { KitsComponent } from './pages/kits/kits.component';
 import { ContatoComponent } from './pages/contato/contato.component';
 
