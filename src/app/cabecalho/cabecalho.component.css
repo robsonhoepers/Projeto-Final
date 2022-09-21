@@ -62,6 +62,7 @@
   margin-left: 10px;
   font-size: 18px;
   position: absolute;
+  
 }
 
 .dp-menu ul li:hover ul {
@@ -70,8 +71,9 @@
 .clIcone{
   transition: all 0.5s;
   cursor: pointer;
-  position: absolute;
-  left: 1050px;
+  position: relative;
+  left: 55vw;
+  
   
 }
 .clIcone:hover{
