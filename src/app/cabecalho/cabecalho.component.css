@@ -71,8 +71,9 @@
 .clIcone{
   transition: all 0.5s;
   cursor: pointer;
+  display: inline-block;
   position: relative;
-  left: 55vw;
+  align-content: flex-end;
   
   
 }

@@ -30,7 +30,6 @@ export class TelaprincipalComponent implements OnInit {
       imageAlt: 'person2',
     },
   ]
- 
 
   constructor() { }
 
