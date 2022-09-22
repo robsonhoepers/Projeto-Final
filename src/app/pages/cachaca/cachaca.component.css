@@ -414,6 +414,12 @@ a:hover {
   color: #000;
   letter-spacing: .5px;
 }
+.product-title a:hover{
+  
+  -webkit-filter: drop-shadow(5px 10px 5px rgba(0,0,0,.5));
+  filter: drop-shadow(5px 10px 5px rgba(0,0,0,.5));
+
+}
 
 .product-info {
   text-align: center;
