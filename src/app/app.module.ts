@@ -31,6 +31,7 @@ import { CachacaComponent } from './pages/cachaca/cachaca.component';
 import { KitsComponent } from './pages/kits/kits.component';
 import { ContatoComponent } from './pages/contato/contato.component';
 import { CarouselModule } from './carousel/carousel.module';
+import { ProdutoscadastradosComponent } from './pages/produtoscadastrados/produtoscadastrados.component';
 
 
 
@@ -59,7 +60,8 @@ import { CarouselModule } from './carousel/carousel.module';
     VodkaComponent,
     CachacaComponent,
     KitsComponent,
-    ContatoComponent
+    ContatoComponent,
+    ProdutoscadastradosComponent
     
     
   ],

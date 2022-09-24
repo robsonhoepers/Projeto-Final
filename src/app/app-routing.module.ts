@@ -25,27 +25,29 @@ import { DadosempresaComponent } from './pages/dadosempresa/dadosempresa.compone
 
 import { KitsComponent } from './pages/kits/kits.component';
 import { ContatoComponent } from './pages/contato/contato.component';
+import { ProdutoscadastradosComponent } from './pages/produtoscadastrados/produtoscadastrados.component';
 
 
 const routes: Routes = [
-  {path: 'administrativo', component: AdministrativoComponent},
+  {path: '', component: TelaprincipalComponent},
   {path: 'idade', component: ConfirmacaoidadeComponent},
-  {path: 'telaprincipal', component: TelaprincipalComponent},
+  {path: 'autenticacao', component: AutenticacaoComponent},
   {path: 'categorias', component: CategoriasComponent},
   {path: 'produtos', component: ProdutosComponent},
-  {path: 'cadastroproduto', component: CadastroprodutosComponent},
-  {path: 'cadastrousuario', component: CadastrousuarioComponent},
-  {path: 'autenticacao', component: AutenticacaoComponent},
-  {path: 'carrinhocompra', component: CarrinhocompraComponent},
-  {path: 'finalizarcompra', component: FinalizarcompraComponent},
-  {path: 'dadosusuario', component: DadosusuarioComponent},
   {path: 'gin', component: GinComponent},
   {path: 'cervejas', component: CervejaComponent},
   {path: 'cachacas', component: CachacaComponent},
   {path: 'vodka', component: VodkaComponent},
   {path: 'kits', component: KitsComponent},
-  {path: 'contato', component: ContatoComponent},
+  {path: 'carrinhocompra', component: CarrinhocompraComponent},
+  {path: 'finalizarcompra', component: FinalizarcompraComponent},
+  {path: 'dadosusuario', component: DadosusuarioComponent},
+  {path: 'administrativo', component: AdministrativoComponent},
+  {path: 'cadastrousuario', component: CadastrousuarioComponent},
+  {path: 'cadastroproduto', component: CadastroprodutosComponent},
+  {path: 'produtoscadastrados', component: ProdutoscadastradosComponent},
   {path: 'dadosempresa', component: DadosempresaComponent},
+  {path: 'contato', component: ContatoComponent},
   {path: 'relatoriocompras', component: RelatoriocompraComponent},
   {path: '**', component: Erro404Component}
 ];
