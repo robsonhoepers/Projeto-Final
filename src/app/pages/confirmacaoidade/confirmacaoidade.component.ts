@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-confirmacaoidade',
   templateUrl: './confirmacaoidade.component.html',
   styleUrls: ['./confirmacaoidade.component.css']
 })
-export class ConfirmacaoidadeComponent implements OnInit {
+export class ConfirmacaoidadeComponent {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {
+  public login(){
+    localStorage['token'] = 'true';
+    this.router.navigate(['/']);
   }
 
 }

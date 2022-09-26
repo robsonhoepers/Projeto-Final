@@ -26,11 +26,15 @@ import { DadosempresaComponent } from './pages/dadosempresa/dadosempresa.compone
 import { KitsComponent } from './pages/kits/kits.component';
 import { ContatoComponent } from './pages/contato/contato.component';
 import { ProdutoscadastradosComponent } from './pages/produtoscadastrados/produtoscadastrados.component';
+import { GetcachacaComponent } from './pages/getcachaca/getcachaca.component';
+import { UsuarioComponent } from './pages/usuario/usuario.component';
+import { CabecalhoComponent } from './cabecalho/cabecalho.component';
+import { RodapeComponent } from './rodape/rodape.component';
 
 
 const routes: Routes = [
-  {path: '', component: TelaprincipalComponent},
   {path: 'idade', component: ConfirmacaoidadeComponent},
+  {path: '', component: TelaprincipalComponent, canActivate: [AuthGuard]},
   {path: 'autenticacao', component: AutenticacaoComponent},
   {path: 'categorias', component: CategoriasComponent},
   {path: 'produtos', component: ProdutosComponent},
@@ -49,7 +53,12 @@ const routes: Routes = [
   {path: 'dadosempresa', component: DadosempresaComponent},
   {path: 'contato', component: ContatoComponent},
   {path: 'relatoriocompras', component: RelatoriocompraComponent},
+  {path: 'getcachaca', component: GetcachacaComponent},
+  {path: 'usuario', component: UsuarioComponent},
+  {path: 'cabecalho', component: CabecalhoComponent, canActivate: [AuthGuard]},
+  {path: 'rodape', component: RodapeComponent, canActivate: [AuthGuard]},
   {path: '**', component: Erro404Component}
+
 ];
 
 @NgModule({

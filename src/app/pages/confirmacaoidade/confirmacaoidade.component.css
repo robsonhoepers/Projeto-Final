@@ -1,0 +1,23 @@
+.clImagemTelaIdade{
+    width: 150px;
+    height: 150px;
+  }
+  
+  .clButtonTelaIdade{
+    margin-right: 5%;
+    margin-left: 5%;
+    width: 8%;
+    height: 50px;
+    background: #710000 ;
+    color: aliceblue;
+    border-radius: 4px;
+    border: 0px;
+  }
+  .clButtonTelaIdade:hover{
+    background-color: #830101;
+  }
+  
+  .clRouterLink{
+    text-decoration: none;
+    color: aliceblue;
+  }

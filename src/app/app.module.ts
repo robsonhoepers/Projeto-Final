@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -32,6 +32,8 @@ import { KitsComponent } from './pages/kits/kits.component';
 import { ContatoComponent } from './pages/contato/contato.component';
 import { CarouselModule } from './carousel/carousel.module';
 import { ProdutoscadastradosComponent } from './pages/produtoscadastrados/produtoscadastrados.component';
+import { GetcachacaComponent } from './pages/getcachaca/getcachaca.component';
+import { UsuarioComponent } from './pages/usuario/usuario.component';
 
 
 
@@ -61,7 +63,9 @@ import { ProdutoscadastradosComponent } from './pages/produtoscadastrados/produt
     CachacaComponent,
     KitsComponent,
     ContatoComponent,
-    ProdutoscadastradosComponent
+    ProdutoscadastradosComponent,
+    GetcachacaComponent,
+    UsuarioComponent
     
     
   ],
@@ -71,7 +75,7 @@ import { ProdutoscadastradosComponent } from './pages/produtoscadastrados/produt
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule,
+    
     CarouselModule
   ],
   providers: [AuthGuard],
