@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Vodka } from 'src/app/interfaces/vodka';
+import { VodkaService } from 'src/app/services/vodka.service';
 
 @Component({
   selector: 'app-vodka',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VodkaComponent implements OnInit {
 
-  constructor() { }
+  vodkas: Vodka[] = [ {
+    
+    codProd: "",
+    imagensSrc: "",  
+    descricao: "",
+    nomeProduto: "",
+    valorProduto: ""
+},
+]
+
+constructor(private vodkaService: VodkaService) { }
 
   ngOnInit(): void {
-  }
 
+    
+    this.vodkaService.getVodka().subscribe((vodkas) => {
+      this.vodkas = vodkas;
+      
+   });
+   
+  }
 }

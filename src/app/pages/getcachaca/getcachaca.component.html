@@ -1,17 +1,26 @@
- <!-- PRODUTO 1-->
- <div class="row bg-light" >
-    <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5" >
-        <div class="product">
-          <div class="product-wrap">
-              <a routerLink="/produtos"><img id="idProduto1"  class="img-fluid w-100 mb-3 img-first" [src]="cachacas.imagens" alt="product-img"/></a>
-             
-          </div>  
+
+<div div class="container-fluid">
+  <div class="row bg-light">
+    <div class="col-xs-4" >
+      <div class="card borda-card " style="margin-top: 10px">
+        <a routerLink="/produtos"><img  id="idProduto1" class = "img-fluid mb-3" width="280" height="280" [src]="src" alt="product-img"></a>       
           <span class="onsale"></span>
           <div class="product-info">
-              <h2 class="product-title h5 mb-0"><a routerLink="/produtos">Byllard</a></h2>
-              <span id="idPrecoProduto1" class="price">
-                R$ 89,90
-              </span>
+                <h2 class="product-title h5 mb-0"><a routerLink="/produtos" >{{nomeProduto}} </a></h2>
+                <span id="idPrecoProduto1" class="price">{{valorProduto}}</span>
           </div>
       </div>
     </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+

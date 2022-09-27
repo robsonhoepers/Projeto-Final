@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Kits } from 'src/app/interfaces/kits';
 
 @Component({
   selector: 'app-kits',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KitsComponent implements OnInit {
 
-  constructor() { }
+  kits: Kits[] = [ {
+    
+    codProd: "",
+    imagensSrc: "",  
+    descricao: "",
+    nomeProduto: "",
+    valorProduto: ""
+},
+]
+
+constructor() { }
 
   ngOnInit(): void {
-  }
 
+  }
 }

@@ -1,39 +1,30 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 
-import { Cachaca } from 'src/app/interfaces/cachaca';
-import { CachacaService } from 'src/app/services/cachaca.service';
+
+
 
 @Component({
   selector: 'app-getcachaca',
   templateUrl: './getcachaca.component.html',
   styleUrls: ['./getcachaca.component.css']
 })
-export class GetcachacaComponent {
 
 
+export class GetcachacaComponent implements OnInit {
 
-  cachacas: Cachaca = {
+  @Input() src: string = "";
+  @Input() nomeProduto: string = "";
+  @Input() valorProduto: string = "";
 
-        codProd: "", 
-        imagens: "", 
-        descricao: "",
-        nomeProduto: ""
-    }
- 
   
 
-  constructor(private cachacaService: CachacaService, private router: Router) {
+  constructor() {
 
    }
-  
 
-  public cachaca() {
+  ngOnInit(): void {
 
-    this.cachacaService.getUsuario().subscribe((cachacas) => {
-      this.cachacas = cachacas[0];
-      
-   });
+    
   }
 }

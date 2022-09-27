@@ -1,4 +1,4 @@
-export interface Cachaca {
+export interface Kits {
     codProd: string, 
     imagensSrc: string,
     descricao: string,

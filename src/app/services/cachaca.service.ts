@@ -7,11 +7,10 @@ import { Cachaca } from '../interfaces/cachaca';
   providedIn: 'root'
 })
 export class CachacaService {
-  [x: string]: any;
-  
+ 
   constructor(private http: HttpClient) { }
   //chama o usuário no db.jSon
-  getUsuario(): Observable<Cachaca[]> {
+  getCachaca(): Observable<Cachaca[]> {
     return this.http.get<Cachaca[]>("http://localhost:3000/cachaca")
   }
 }

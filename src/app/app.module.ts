@@ -35,6 +35,11 @@ import { ProdutoscadastradosComponent } from './pages/produtoscadastrados/produt
 import { GetcachacaComponent } from './pages/getcachaca/getcachaca.component';
 import { UsuarioComponent } from './pages/usuario/usuario.component';
 
+import { GetcervejaComponent } from './pages/getcerveja/getcerveja.component';
+import { GetginComponent } from './pages/getgin/getgin.component';
+import { GetkitsComponent } from './pages/getkits/getkits.component';
+import { GetvodkaComponent } from './pages/getvodka/getvodka.component';
+
 
 
 
@@ -65,7 +70,11 @@ import { UsuarioComponent } from './pages/usuario/usuario.component';
     ContatoComponent,
     ProdutoscadastradosComponent,
     GetcachacaComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    GetcervejaComponent,
+    GetginComponent,
+    GetkitsComponent,
+    GetvodkaComponent
     
     
   ],
