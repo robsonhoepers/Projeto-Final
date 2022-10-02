@@ -1,1 +1,128 @@
-<p>cadastroprodutos works!</p>
+<section class="section products-main">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="title text-center">
+                    <h2>CADASTRO DE PRODUTOS</h2>                    
+                </div>
+            </div>
+        </div>  
+
+<form [formGroup] = "cadastroProduto"> 
+    
+    <!--Campo Código Produto -->
+    <div>
+        <label for="idCodProd">Código Produto</label>
+    </div>
+    <div>
+        <input type="text" class="form-control mb-3" 
+        id="idCodProd" 
+        formControlName="codProd" 
+        autocomplete="off"
+        >
+    </div>
+    <div *ngIf="cadastroProduto.get('codProd')?.errors?.['required'] && cadastroProduto.get('codProd')?.touched"  class="text-danger">
+        Código obrigatório
+    </div>
+    
+    <!--Campo Tipo de Produto -->
+
+
+
+
+
+
+
+
+    
+    <!--Campo Nome Produto -->
+    <div>
+        <label for="idNome">Nome do Produto</label>
+    </div>
+    <div>
+        <input type="text" id="idNome" 
+                formControlName="nomeProduto" 
+                class="form-control mb-3" 
+                autocomplete="off"
+                >
+    </div>
+    <div *ngIf="cadastroProduto.get('nomeProduto')?.errors?.['required'] && cadastroProduto.get('nomeProduto')?.touched"  class="text-danger">
+        Nome obrigatório
+    </div>
+
+    <!--Campo Quantidade estoque -->
+    <div>
+            <label for="idQuantidade">Quantidade Disponivel</label>
+        </div>
+        <div>
+            <input type="text" class="form-control mb-3" 
+                    id="idQuantidade" 
+                    formControlName="quantidade" 
+                    autocomplete="off"
+                    >
+        </div>
+        <div *ngIf="cadastroProduto.get('quantidade')?.errors?.['required'] && cadastroProduto.get('quantidade')?.touched"  class="text-danger">
+            Quantidade obrigatório
+        </div>
+
+        <!--Campo Preço Produto -->
+        <div>
+            <label for="idPrecoProd">Preço do Produto</label>
+        </div>
+        <div>
+            <input type="text" class="form-control mb-3" 
+                    id="idValorProduto" 
+                    formControlName="valorProduto" 
+                    autocomplete="off"
+                    >
+        </div>
+        <div *ngIf="cadastroProduto.get('valorProduto')?.errors?.['required'] && cadastroProduto.get('valorProduto')?.touched"  class="text-danger">
+            Preço obrigatório
+        </div>
+
+        <!--Campo caminho das imagens -->
+        <div>
+            <label for="idImagemProd">Insira o caminho para a imagem do produto</label>
+        </div>
+        <div>
+            <input type="text" class="form-control mb-3" 
+                    id="idImagemProd" 
+                    formControlName="imagensSrc" 
+                    autocomplete="off"
+                    >
+        </div>
+        <div *ngIf="cadastroProduto.get('imagensSrc')?.errors?.['required'] && cadastroProduto.get('imagensSrc')?.touched"  class="text-danger">
+            Caminho Imagem obrigatório
+        </div>
+
+        <!--Campo Descrição Produto-->
+        <div>
+            <label for="idDescricao">Descrição do Produto</label>
+        </div>
+        <div >
+            <textarea rows="5" class="form-control mb-3" 
+                        id="idDescricao" 
+                        formControlName="descricao"
+                        autocomplete="off"
+                        >
+            </textarea>
+            
+        </div>
+        <div *ngIf="!(cadastroProduto.get('descricao')?.touched) || 
+        (cadastroProduto.get('descricao')?.errors?.[''] === null)">
+        </div>
+
+        <div *ngIf="cadastroProduto.get('descricao')?.errors?.['required'] && cadastroProduto.get('descricao')?.touched"
+        class="text-danger">
+            Descrição Obrigatória
+        </div>
+        <div *ngIf="cadastroProduto.get('descricao')?.errors?.['maxlength'] && cadastroProduto.get('descricao')?.touched"
+        class="text-danger">
+            Respeite o Limite de 500 Caracteres
+        </div>
+
+        <button (click)="cadastrar()" [disabled]="!cadastroProduto.valid">Cadastrar</button>
+        <button (click)="cancelar()">Cancelar</button>
+
+    
+</form>
