@@ -17,14 +17,14 @@ export class AdministrativoComponent implements OnInit {
 
   public signiOut(){
     localStorage['token'] = 'false'
-    this.router.navigate(['/login']);
+    this.router.navigate(['/autenticacao']);
   }
 
   /**
    * readLocalStorageToken
    */
   public readLocalStorageToken() {
-    if (localStorage['token'] === 'true'){
+    if (localStorage['token'] === 'adminOn'){
       return true
     } else {
       return false

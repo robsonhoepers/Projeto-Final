@@ -16,7 +16,7 @@ export class GetcachacaComponent implements OnInit {
   @Input() src: string = "";
   @Input() nomeProduto: string = "";
   @Input() valorProduto: string = "";
-
+  @Input() id: string = "";
   
 
   constructor() {

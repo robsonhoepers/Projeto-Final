@@ -12,13 +12,14 @@
           <div div class="container-fluid">
             <div class="row bg-light ">
               <div class="col d-flex flex-wrap ">             
-                <app-getkits *ngFor="let kits of kits" 
-                            [src]="kits.imagensSrc" 
-                            [nomeProduto] = "kits.nomeProduto" 
-                            [valorProduto] = "kits.valorProduto"
-                            
-                            >
-                          </app-getkits>  
+                <app-produtoscadastrados *ngFor="let produto of produtos" 
+                            [src]="produto.imagensSrc" 
+                            [nomeProduto] = "produto.nomeProduto" 
+                            [valorProduto] = "produto.valorProduto"
+                            [id] = "produto.id"
+                            [descricao] = "produto.descricao"
+                            [quantidade] = "produto.quantidade">
+                          </app-produtoscadastrados>  
                 </div>                   
             </div>
           </div>

@@ -1,16 +1,24 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Cachaca } from '../interfaces/cachaca';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class CachacaService {
  
-  constructor(private http: HttpClient) { }
-  //chama o usuário no db.jSon
-  getCachaca(): Observable<Cachaca[]> {
-    return this.http.get<Cachaca[]>("http://localhost:3000/cachaca")
+  port = "8080"
+  url = "http://localhost:" + this.port + "/produtos"
+
+httpOptions = {
+    headers: new HttpHeaders({'Content-Type': 'application/json'})
+}
+
+  constructor(private HttpClient: HttpClient) { }
+  
+  getCachaca(categoria: string): Observable<Cachaca>{
+    return this.HttpClient.get<Cachaca>(this.url + "/" + categoria)
   }
 }

@@ -1,0 +1,39 @@
+table{
+    width: 100%;
+}
+
+.edit{
+    margin-right: 30px;
+}
+
+.delete > i {
+    color: red;
+}
+
+.mat-column-codProd{
+    text-align: center;
+}
+
+.mat-column-nomeProduto{
+    text-align: center;
+}
+
+.mat-column-valorProduto{
+    text-align: center;
+}
+
+.mat-column-descricao{
+text-align: center;
+}
+
+.mat-column-quantidade{
+    text-align: center;
+}
+
+.mat-column-imagensSrc{
+    text-align: center;
+}
+
+
+
+

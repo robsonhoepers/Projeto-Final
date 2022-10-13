@@ -9,25 +9,21 @@ import { GinService } from 'src/app/services/gin.service';
 })
 export class GinComponent implements OnInit {
 
-  gins: Gin[] = [ {
-    
-    codProd: "",
-    imagensSrc: "",  
-    descricao: "",
-    nomeProduto: "",
-    valorProduto: ""
-},
-]
+  gins: Gin[] = []
 
 constructor(private ginService: GinService) { }
 
   ngOnInit(): void {
 
-    
-    this.ginService.getGin().subscribe((gins) => {
-      this.gins =gins;
+    const categoria = "5";
+    this.ginService.getGin(categoria).subscribe((gins) => {
+      this.gins.push(gins);
+      console.log(gins);
+      
       
    });
    
-  }
+    console.log(this.gins);
+
+}
 }

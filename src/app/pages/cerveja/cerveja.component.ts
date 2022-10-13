@@ -8,26 +8,20 @@ import { CervejaService } from 'src/app/services/cerveja.service';
   styleUrls: ['./cerveja.component.css']
 })
 export class CervejaComponent implements OnInit {
-
- cervejas: Cerveja [] = [ {
-    
-    codProd: "",
-    imagensSrc: "",  
-    descricao: "",
-    nomeProduto: "",
-    valorProduto: ""
-},
-]
+  
+  
+ cervejas: Cerveja [] = []
 
 constructor(private cervejaService: CervejaService) { }
 
   ngOnInit(): void {
 
-    
-    this.cervejaService.getCerveja().subscribe((cervejas) => {
-      this.cervejas =cervejas;
+    const categoria = "5";
+    this.cervejaService.getCerveja(categoria).subscribe((cervejas) => {
+      this.cervejas.push(cervejas);
+      console.log(cervejas);
+      
       
    });
-   
   }
 }

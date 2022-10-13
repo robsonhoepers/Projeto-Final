@@ -1,14 +1,13 @@
 <div class="clHeader">.</div>
-<div class="">
-    <div class="row border-bottom" >
-          <div class="col-4">
-            <nav class="container-fluid p-2 ">
+<div class=" border-bottom">
+         <nav class="p-2 ">
               <a class="clLogo" routerLink ="/">
                   <img src="https://github.com/robsonhoepers/Projeto-Final/blob/main/src/assets/icones/logo.png?raw=true" alt="Avatar Logo" style="width:60px;" class="rounded-pill margin-top-30"> 
               </a>
             <nav class="dp-menu" >
               <ul>
-                  <li><a routerLink ="/categorias" class="clBarra">CATEGORIAS</a>
+                  <li>
+                    <a routerLink ="/categorias" class="clBarra">CATEGORIAS</a>
                       <ul class="dropdown-item">
                         <div class="dropdown-item-right">
                           <a routerLink ="/cachacas" class="clBarra">CACHAÇAS</a>
@@ -18,28 +17,27 @@
                         </div>
                       </ul>
                   </li>
+                  
                   <li class="clKits"><a routerLink ="/kits">KITS</a></li>
                   <li class="clContato"><a routerLink ="/contato">CONTATO</a></li>
+                  
               </ul>
             </nav>
             </nav>
+            <div class="d-flex justify-content-end">      
+              <a class="nav-link clIcone" routerLink="/busca">
+                      <img src="https://github.com/robsonhoepers/Projeto-Final/blob/main/src/assets/icones/icone-loupe-noir.png?raw=true" alt="busca" style="width:40px;" class="rounded-pill">
+                  </a>
+                    <a class="nav-link clIcone " routerLink="/autenticacao">
+                      <img src="https://github.com/robsonhoepers/Projeto-Final/blob/main/src/assets/icones/download.png?raw=true" alt="login" style="width:40px;" class="rounded-pill">
+                  </a>
+                    <a class="nav-link clIcone" routerLink="/carrinhocompra">
+                        <img src="https://github.com/robsonhoepers/Projeto-Final/blob/main/src/assets/icones/fig%2001.png?raw=true" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+                  </a>
+            </div> 
           </div>
-          <div class="col-6"></div>
-          <div class="col"></div>
-          <div class="col mt-4">      
-                  <a class="nav-link clIcone" routerLink="/busca">
-                    <img src="https://github.com/robsonhoepers/Projeto-Final/blob/main/src/assets/icones/icone-loupe-noir.png?raw=true" alt="busca" style="width:40px;" class="rounded-pill">
-                </a>
-                  <a class="nav-link clIcone " routerLink="/autenticacao">
-                    <img src="https://github.com/robsonhoepers/Projeto-Final/blob/main/src/assets/icones/download.png?raw=true" alt="login" style="width:40px;" class="rounded-pill">
-                </a>
-                  <a class="nav-link clIcone" routerLink="/carrinhocompra">
-                      <img src="https://github.com/robsonhoepers/Projeto-Final/blob/main/src/assets/icones/fig%2001.png?raw=true" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
-                </a>
-          </div>       
-    </div>
-</div>
-
+          
+          
 
 <!--  Formato Antigo, caso seja necessario voltar!
 <div class="container-fluid">
@@ -76,8 +74,7 @@
                   <a class="nav-link" routerLink="/carrinhocompra">
                       <img src="https://github.com/robsonhoepers/Projeto-Final/blob/main/src/assets/icones/fig%2001.png?raw=true" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
                   </a>
-                </li> 
-              
+                </li>                
           </ul>
         </nav>
   </nav>

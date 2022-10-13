@@ -1,7 +1,5 @@
-import { Component, NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { combineLatest } from 'rxjs';
 
 import { AuthGuard } from './services/auth/auth.guard';
 import { ConfirmacaoidadeComponent } from './pages/confirmacaoidade/confirmacaoidade.component';
@@ -30,11 +28,12 @@ import { GetcachacaComponent } from './pages/getcachaca/getcachaca.component';
 import { UsuarioComponent } from './pages/usuario/usuario.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { RodapeComponent } from './rodape/rodape.component';
+import { ProdutoupdateComponent } from './pages/produtoupdate/produtoupdate.component';
 
 
 const routes: Routes = [
   {path: 'idade', component: ConfirmacaoidadeComponent},
-  {path: '', component: TelaprincipalComponent, canActivate: [AuthGuard]},
+  {path: '', component: TelaprincipalComponent,},
   {path: 'autenticacao', component: AutenticacaoComponent},
   {path: 'categorias', component: CategoriasComponent},
   {path: 'produtos', component: ProdutosComponent},
@@ -45,8 +44,8 @@ const routes: Routes = [
   {path: 'kits', component: KitsComponent},
   {path: 'carrinhocompra', component: CarrinhocompraComponent},
   {path: 'finalizarcompra', component: FinalizarcompraComponent},
-  {path: 'dadosusuario', component: DadosusuarioComponent},
-  {path: 'administrativo', component: AdministrativoComponent},
+  {path: 'dadosusuario', component: DadosusuarioComponent, canActivate: [AuthGuard]},
+  {path: 'administrativo', component: AdministrativoComponent, canActivate: [AuthGuard]},
   {path: 'cadastrousuario', component: CadastrousuarioComponent},
   {path: 'cadastroproduto', component: CadastroprodutosComponent},
   {path: 'produtoscadastrados', component: ProdutoscadastradosComponent},
@@ -54,9 +53,10 @@ const routes: Routes = [
   {path: 'contato', component: ContatoComponent},
   {path: 'relatoriocompras', component: RelatoriocompraComponent},
   {path: 'getcachaca', component: GetcachacaComponent},
-  {path: 'usuario', component: UsuarioComponent},
-  {path: 'cabecalho', component: CabecalhoComponent, canActivate: [AuthGuard]},
-  {path: 'rodape', component: RodapeComponent, canActivate: [AuthGuard]},
+  {path: 'usuario', component: UsuarioComponent, canActivate: [AuthGuard] },
+  {path: 'cabecalho', component: CabecalhoComponent,},
+  {path: 'rodape', component: RodapeComponent,},
+  {path: 'produtoupdate/:id', component: ProdutoupdateComponent},
   {path: '**', component: Erro404Component}
 
 ];

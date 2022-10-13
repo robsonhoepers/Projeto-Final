@@ -11,11 +11,12 @@ export class AuthGuard implements CanActivate {
         route: ActivatedRouteSnapshot,
         state: RouterStateSnapshot): Observable<boolean> | boolean {
 
-        if (localStorage['token'] == "true") {
+        if (localStorage['token'] == "true" || localStorage['token'] == "adminOn") {
             return true;
-        } else {
-            this.router.navigate(['/idade']);
+        } else  {
+            this.router.navigate(['/autenticacao']);
             return false
         }
+    
     }
 }

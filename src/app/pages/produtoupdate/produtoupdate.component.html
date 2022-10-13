@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="title text-center">
-                    <h2>CADASTRO DE PRODUTOS</h2>                    
+                    <h2>ALTERAR PRODUTOS</h2>                    
                 </div>
             </div>
         </div>  
@@ -11,7 +11,20 @@
 <form [formGroup] = "cadastroProduto"> 
     
     <!--Campo Código Produto -->
+    <div>
+        <label for="idCodProd">Código Produto</label>
+    </div>
+    <div>
+        <input type="text" class="form-control mb-3" 
+        id="idCodProd" 
+        formControlName="id" 
+        autocomplete="off"
+        readonly>
 
+    </div>
+    <div *ngIf="cadastroProduto.get('id')?.errors?.['required'] && cadastroProduto.get('id')?.touched"  class="text-danger">
+        Código obrigatório
+    </div>
     
     <!--Campo Tipo de Produto -->
     <div>
@@ -25,7 +38,7 @@
     <div *ngIf="cadastroProduto.get('categoria')?.errors?.['required'] && cadastroProduto.get('categoria')?.touched"  class="text-danger">
         Categoria obrigatório
     </div>
-    <!--Campo Nome Produto -->
+     <!--Campo Nome Produto -->
     <div>
         <label for="idNome">Nome do Produto</label>
     </div>
@@ -111,8 +124,9 @@
             Respeite o Limite de 500 Caracteres
         </div>
 
-        <button (click)="cadastrar()" [disabled]="!cadastroProduto.valid">Cadastrar</button>
-        <button (click)="cancelar()">Cancelar</button>
+        <button class="btn btn-success"(click)="update()">Salvar</button>
+        <button class="btn btn-danger" (click)="delete()">Deletar</button>
+        <button class="btn btn-secondary" (click)="cancelar()">Cancelar</button>
 
     
 </form>

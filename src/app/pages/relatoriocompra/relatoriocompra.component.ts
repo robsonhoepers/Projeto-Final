@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { jsPDF} from 'jspdf';
 
 @Component({
   selector: 'app-relatoriocompra',
@@ -12,4 +13,10 @@ export class RelatoriocompraComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  printPdf(){
+  
+    const doc = new jsPDF();
+    doc.text("Hello world!", 10, 10);
+    doc.save("a4.pdf"); 
+    }
 }

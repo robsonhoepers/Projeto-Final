@@ -1,9 +1,11 @@
 export interface Produto {
-    codProd: string, 
+    
+    id: String, 
     imagensSrc: string,
     descricao: string,
     nomeProduto: string,
     valorProduto: string,
-    quantidade: string
+    quantidade: string,
+    categoria: string
 
 }

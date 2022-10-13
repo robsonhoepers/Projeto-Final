@@ -1,0 +1,137 @@
+.container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+   
+  }
+  .card{
+    background-color: #E3E0E0;
+    font-weight: bold
+  }
+  .clLogin{
+    margin-top: 10%;
+    align-items: center;
+    font-size: 40px;
+   
+  }
+  
+  
+  .clInput{
+    margin: 10px;
+    margin-left: 40px;
+    width: 80%;
+  }
+  
+  
+  .clEmail{
+    margin-top: 40px;
+    margin-right: 60%;
+    margin-bottom: 0%;
+    color: rgb(0, 0, 0);
+    
+  }
+  .clPassword{
+    margin-top: 20px;
+    margin-bottom: 0px;
+    color: rgb(0, 0, 0);
+    font-weight: bold
+   
+  }
+  .clForgot{
+    margin-left: 70px;
+    color:  #710000 ;
+    text-decoration: none;
+    
+  }
+  .clForgot:hover{
+   color: #830101;
+  }
+  
+  input[type=checkbox] {
+    margin: 10px;
+    position: relative;
+    cursor: pointer;
+    
+  }
+  input[type=checkbox]:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    left: 0;
+    background-color:#FFFFFF;
+  }
+  input[type=checkbox]:checked:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color:#710000;
+  }
+  input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 5px;
+  }
+  
+  
+  .clButton{
+    margin-left: 80px;
+    width: 20%;
+    height: 120%;
+    background: #710000 ;
+    color: aliceblue;
+    border-radius: 4px;
+    border: 0px;
+  }
+  .clButton:hover{
+    background-color: #830101;
+  }
+  
+  .clMsn{
+    margin: 10%;
+  
+  }
+  .clRed{
+    color: red;
+  }
+  .clGreen{
+    color: green;
+  }
+  
+  
+  .clP{
+  
+    margin-bottom: 5%;
+  }
+  
+  .clCopy{
+    color: gray;
+   
+  }
+  .clCreate{
+    color:  #710000 ;
+    text-decoration: none;
+    
+  }
+  .clCreate:hover{
+   color: #830101;
+  }
+  
+  .spinner-border{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-left: 50%;
+    color:  #710000 ;
+  }

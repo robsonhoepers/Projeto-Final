@@ -1,6 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Produto } from '../interfaces/cadastroprodutos';
 import { Vodka } from '../interfaces/vodka';
 
 @Injectable({
@@ -8,9 +9,16 @@ import { Vodka } from '../interfaces/vodka';
 })
 export class VodkaService {
 
-  constructor(private http: HttpClient) { }
-  //chama o vodka no db.jSon
-  getVodka(): Observable<Vodka[]> {
-    return this.http.get<Vodka[]>("http://localhost:3000/vodka")
+  port = "8080"
+  url = "http://localhost:" + this.port + "/produtos"
+
+httpOptions = {
+    headers: new HttpHeaders({'Content-Type': 'application/json'})
+}
+
+  constructor(private HttpClient: HttpClient) { }
+  
+  getVodka(categoria: string): Observable<Produto>{
+    return this.HttpClient.get<Produto>(this.url + "/" + categoria)
   }
 }

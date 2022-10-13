@@ -1,0 +1,17 @@
+.clButtonPdf{
+    border: 2px none;
+    font: inherit;
+    line-height: 0;
+    margin: 0.1em;
+    padding: 1em 1em;
+    border-radius: 8px;
+    background-color:  #710000;
+    transition: 0.25s;
+    border-color: aliceblue;
+    cursor: pointer;
+    color: aliceblue;
+    
+  }
+  .clButtonPdf:hover {
+    background-color: #830101;
+  }

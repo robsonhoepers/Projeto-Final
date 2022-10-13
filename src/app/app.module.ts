@@ -1,8 +1,10 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
+import {MatIconModule} from '@angular/material/icon';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+ 
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -39,6 +41,10 @@ import { GetcervejaComponent } from './pages/getcerveja/getcerveja.component';
 import { GetginComponent } from './pages/getgin/getgin.component';
 import { GetkitsComponent } from './pages/getkits/getkits.component';
 import { GetvodkaComponent } from './pages/getvodka/getvodka.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { ProdutoupdateComponent } from './pages/produtoupdate/produtoupdate.component';
 
 
 
@@ -74,7 +80,9 @@ import { GetvodkaComponent } from './pages/getvodka/getvodka.component';
     GetcervejaComponent,
     GetginComponent,
     GetkitsComponent,
-    GetvodkaComponent
+    GetvodkaComponent,
+    ProdutoupdateComponent
+    
     
     
   ],
@@ -85,7 +93,14 @@ import { GetvodkaComponent } from './pages/getvodka/getvodka.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    CarouselModule
+    CarouselModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatIconModule,
+    BrowserAnimationsModule
+    
+   
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

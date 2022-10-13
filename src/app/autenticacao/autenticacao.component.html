@@ -1,1 +1,39 @@
-<p>autenticacao works!</p>
+<div class="container container-sm d-flex justify-content-center">
+    <div class="card text-center shadow-lg" style="width: 23rem;">
+
+     <h2 class="clLogin">Login</h2>
+<div>
+    <p class="clEmail">E-Mail</p>
+</div>
+
+<div>
+    <input class="clInput form-control"  type="text" id="idEmail"
+    [(ngModel)] = "usuario.userId">
+</div>
+
+<div>
+    <p class="clPassword">Senha<a class="clForgot" href="">Esqueceu sua senha?</a></p>
+    
+</div>
+
+<div>
+    <input class="clInput form-control" type="password" id="idPassword" [(ngModel)] = "usuario.password">
+</div>
+
+<div>
+    <input class="clCheckbox" type="checkbox" id="idCheckbox">
+    <label class="clLabelCheckbox" for="idCheckbox">Lembre de mim</label>
+    <button class="clButton" type="button" (click)="login()">Login</button>
+</div>
+
+    <div class="spinner-border" *ngIf="spinner, else mensagem"></div>
+
+    <ng-template #mensagem>
+    <p class="clMsn" [ngClass]="class">{{msn}}</p>
+    </ng-template>
+
+    <p class="clP">Não tem uma conta? <a routerLink="/cadastrousuario" class="clCreate">Crie uma conta</a></p>
+
+  </div>
+</div>
+

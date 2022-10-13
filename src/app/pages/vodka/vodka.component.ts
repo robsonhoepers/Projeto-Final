@@ -9,25 +9,23 @@ import { VodkaService } from 'src/app/services/vodka.service';
 })
 export class VodkaComponent implements OnInit {
 
-  vodkas: Vodka[] = [ {
-    
-    codProd: "",
-    imagensSrc: "",  
-    descricao: "",
-    nomeProduto: "",
-    valorProduto: ""
-},
-]
+  vodkas: Vodka[] = []
 
 constructor(private vodkaService: VodkaService) { }
 
   ngOnInit(): void {
 
-    
-    this.vodkaService.getVodka().subscribe((vodkas) => {
-      this.vodkas = vodkas;
+    const categoria = "5";
+    this.vodkaService.getVodka(categoria).subscribe((vodkas) => {
+      this.vodkas.push(vodkas);
+      console.log(vodkas);
+      
       
    });
+   
+    console.log(this.vodkas);
+
+    
    
   }
 }

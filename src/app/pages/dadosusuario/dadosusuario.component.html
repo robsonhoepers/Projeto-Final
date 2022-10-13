@@ -1,1 +1,126 @@
-<p>dadosusuario works!</p>
+
+<section class="page-header">
+    <div class="overly"></div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="title text-center">
+            <h2>Meus Dados</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section >
+    <div class="container">
+      <div class="row">
+        <form [formGroup] = "formDadosUsuario">
+          <div class="form-group">
+            <label for="idNome">Nome</label>
+            <input type="text" id="idNome" formControlName="nome" class="form-control mb-3" autocomplete="off">
+            <div *ngIf="formDadosUsuario.get('nome')?.errors?.['required'] && formDadosUsuario.get('nome')?.touched"  class="text-danger">
+              Nome obrigatório!
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="genero">Genero</label>
+            <input type="text" id="genero" formControlName="genero" class="form-control mb-3" autocomplete="off">
+            <div *ngIf="formDadosUsuario.get('genero')?.errors?.['required'] && formDadosUsuario.get('genero')?.touched"  class="text-danger">
+              Genero obrigatório!
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="cpfCpnj">CPF/CNPJ</label>
+            <input type="text" id="cpfCpnj" formControlName="cpfCnpj" mask="CPF_CNPJ" class="form-control mb-3" autocomplete="off">
+            <div *ngIf="formDadosUsuario.get('cpfCpnj')?.errors?.['required'] && formDadosUsuario.get('cpfCpnj')?.touched"  class="text-danger">
+              CPF/CNPJ obrigatório!
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone" formControlName="telefone" mask="(00) 0000-0000||(00) 00000-0000" class="form-control mb-3" autocomplete="off">
+            <div *ngIf="formDadosUsuario.get('telefone')?.errors?.['required'] && formDadosUsuario.get('telefone')?.touched"  class="text-danger">
+              Telefone obrigatório!
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="dataNascimento">Data Nascimento</label>
+            <input matInput placeholder="DD/MM/YYYY" [maxlength]="10" inputDateMask  id="dataNascimento" formControlName="dataNascimento" mask="00/00/0000" class="form-control mb-3" autocomplete="off">
+            <div *ngIf="formDadosUsuario.get('dataNascimento')?.errors?.['required'] && formDadosUsuario.get('dataNascimento')?.touched"  class="text-danger">
+              Data Nascimento obrigatório!
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="text" id="email" formControlName="email" mask="A*@A*.SSS" class="form-control mb-3" autocomplete="off">
+            <div *ngIf="formDadosUsuario.get('email')?.errors?.['required'] && formDadosUsuario.get('email')?.touched"  class="text-danger">
+              E-mail obrigatório!
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="cep">Cep</label>
+            <input type="text" id="cep" formControlName="cep" mask="00000-000" class="form-control mb-3" autocomplete="off">
+            <div *ngIf="formDadosUsuario.get('cep')?.errors?.['required'] && formDadosUsuario.get('cep')?.touched"  class="text-danger">
+              Cep obrigatório!
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="endereco">Endereço</label>
+            <input type="text" id="endereco" formControlName="endereco" class="form-control mb-3" autocomplete="off">
+            <div *ngIf="formDadosUsuario.get('endereco')?.errors?.['required'] && formDadosUsuario.get('endereco')?.touched"  class="text-danger">
+              Endereço obrigatório!
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" formControlName="cidade" class="form-control mb-3" autocomplete="off">
+            <div *ngIf="formDadosUsuario.get('cidade')?.errors?.['required'] && formDadosUsuario.get('cidade')?.touched"  class="text-danger">
+              Cidade obrigatório!
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="bairro">Bairro</label>
+            <input type="text" id="bairro" formControlName="bairro" class="form-control mb-3" autocomplete="off">
+            <div *ngIf="formDadosUsuario.get('bairro')?.errors?.['required'] && formDadosUsuario.get('bairro')?.touched"  class="text-danger">
+              Bairro obrigatório!
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="uf">UF</label>
+            <input type="text" id="uf" formControlName="uf" class="form-control mb-3" autocomplete="off">
+            <div *ngIf="formDadosUsuario.get('uf')?.errors?.['required'] && formDadosUsuario.get('uf')?.touched"  class="text-danger">
+              UF obrigatório!
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="complemeto">Complemento</label>
+            <input type="text" id="complemeto" formControlName="complemento" class="form-control mb-3" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label for="altSenha">Alterar Senha</label>
+            <input type="text" id="altSenha" formControlName="altSenha" class="form-control mb-3" autocomplete="off">
+          </div>
+          
+            
+              <button (click)="cadastrar()" [disabled]="!formDadosUsuario.valid">Salva</button>
+              <button (click)="cancelar()">Retornar</button>
+            
+          
+        </form>
+      </div>
+  </div>
+  
+  
+  
+  

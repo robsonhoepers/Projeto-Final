@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Produto } from 'src/app/interfaces/cadastroprodutos';
 import { Kits } from 'src/app/interfaces/kits';
+import { CadastroprodutosService } from 'src/app/services/cadastroprodutos.service';
 
 @Component({
   selector: 'app-kits',
@@ -8,19 +10,12 @@ import { Kits } from 'src/app/interfaces/kits';
 })
 export class KitsComponent implements OnInit {
 
-  kits: Kits[] = [ {
-    
-    codProd: "",
-    imagensSrc: "",  
-    descricao: "",
-    nomeProduto: "",
-    valorProduto: ""
-},
-]
-
+  kits: Kits [] = []
 constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {  
 
+   
+     
   }
 }

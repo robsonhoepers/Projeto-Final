@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { concat } from 'rxjs';
 import { Cachaca } from 'src/app/interfaces/cachaca';
 import { CachacaService } from 'src/app/services/cachaca.service';
 
@@ -11,33 +12,18 @@ import { CachacaService } from 'src/app/services/cachaca.service';
 
 export class CachacaComponent  implements OnInit{
   
-  cachacas: Cachaca [] = [ {
-    
-      codProd: "",
-      imagensSrc: "",  
-      descricao: "",
-      nomeProduto: "",
-      valorProduto: ""
-  },
-
- 
-]
-
-
+  cachacas: Cachaca [] = []
 
 constructor(private cachacaService: CachacaService) { }
 
   ngOnInit(): void {
 
-    
-    this.cachacaService.getCachaca().subscribe((cachacas) => {
-      this.cachacas = cachacas;
-      console.log(cachacas);
-      
-      
+    const categoria = "5";
+    this.cachacaService.getCachaca(categoria).subscribe((cachacas) => {
+      this.cachacas.push(cachacas);
+      console.log(cachacas.id);
    });
-   
-    console.log(this.cachacas);
+   console.log(this.cachacas);
   }
-
+  
 }

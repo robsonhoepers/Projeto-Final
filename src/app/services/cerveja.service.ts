@@ -1,17 +1,26 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Produto } from '../interfaces/cadastroprodutos';
 import { Cerveja } from '../interfaces/cerveja';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CervejaService {
+ 
+  port = "8080"
+  url = "http://localhost:" + this.port + "/produtos"
 
-  constructor(private http: HttpClient) { }
-  //chama o usuário no db.jSon
-  getCerveja(): Observable<Cerveja[]> {
-    return this.http.get<Cerveja[]>("http://localhost:3000/cerveja")
+httpOptions = {
+    headers: new HttpHeaders({'Content-Type': 'application/json'})
+}
+
+  constructor(private HttpClient: HttpClient) { }
+  
+  getCerveja(categoria: string): Observable<Produto>{
+    return this.HttpClient.get<Produto>(this.url + "/" + categoria)
   }
+  
 }
 
