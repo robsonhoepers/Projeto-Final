@@ -18,7 +18,7 @@ httpOptions = {
 
   constructor(private HttpClient: HttpClient) { }
   
-  getVodka(categoria: string): Observable<Produto>{
-    return this.HttpClient.get<Produto>(this.url + "/" + categoria)
+  getVodka(categoria: string): Observable<Vodka[]>{
+    return this.HttpClient.get<Vodka[]>(this.url + "?categoria=" + categoria)
   }
 }

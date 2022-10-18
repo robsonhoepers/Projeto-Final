@@ -1,5 +1,5 @@
 export interface Kits {
-    id: String, 
+    id: string, 
     imagensSrc: string,
     descricao: string,
     nomeProduto: string,

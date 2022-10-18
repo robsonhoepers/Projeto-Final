@@ -36,7 +36,7 @@ const routes: Routes = [
   {path: '', component: TelaprincipalComponent,},
   {path: 'autenticacao', component: AutenticacaoComponent},
   {path: 'categorias', component: CategoriasComponent},
-  {path: 'produtos', component: ProdutosComponent},
+  {path: 'produtos/:id', component: ProdutosComponent},
   {path: 'gin', component: GinComponent},
   {path: 'cervejas', component: CervejaComponent},
   {path: 'cachacas', component: CachacaComponent},

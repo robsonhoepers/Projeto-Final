@@ -18,7 +18,7 @@ export class ProdutoupdateComponent implements OnInit {
   
   cadastroProduto: FormGroup;
   produto!: Produto;
-  categorias: Categoria[]=[]
+  categorias: Categoria[]=[];
 
   constructor(private formBuilder: FormBuilder, 
               private cadastroProdService: CadastroprodutosService, 
@@ -77,7 +77,7 @@ export class ProdutoupdateComponent implements OnInit {
     this.route.snapshot.paramMap.get('id')
     this.cadastroProdService.delete(id).subscribe(() => {
     this.cadastroProdService.showAlert2()
-    this.router.navigate(['/produtoscadastrados'])
+    this.router.navigate(['/produtoscadastrados']);
     }
 )};
 }

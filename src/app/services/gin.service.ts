@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Produto } from '../interfaces/cadastroprodutos';
 import { Gin } from '../interfaces/gin';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -18,8 +19,8 @@ httpOptions = {
 
   constructor(private HttpClient: HttpClient) { }
   
-  getGin(categoria: string): Observable<Produto>{
-    return this.HttpClient.get<Produto>(this.url + "/" + categoria)
+  getGin(categoria: string): Observable<Gin[]>{
+    return this.HttpClient.get<Gin[]>(this.url + "?categoria=" + categoria)
   }
   
 }

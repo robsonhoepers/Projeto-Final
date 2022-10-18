@@ -24,14 +24,6 @@
           </div>
   
           <div class="form-group">
-            <label for="genero">Genero</label>
-            <input type="text" id="genero" formControlName="genero" class="form-control mb-3" autocomplete="off">
-            <div *ngIf="formDadosUsuario.get('genero')?.errors?.['required'] && formDadosUsuario.get('genero')?.touched"  class="text-danger">
-              Genero obrigatório!
-            </div>
-          </div>
-  
-          <div class="form-group">
             <label for="cpfCpnj">CPF/CNPJ</label>
             <input type="text" id="cpfCpnj" formControlName="cpfCnpj" mask="CPF_CNPJ" class="form-control mb-3" autocomplete="off">
             <div *ngIf="formDadosUsuario.get('cpfCpnj')?.errors?.['required'] && formDadosUsuario.get('cpfCpnj')?.touched"  class="text-danger">

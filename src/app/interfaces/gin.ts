@@ -1,5 +1,5 @@
 export interface Gin {
-    id: String, 
+    id: string, 
     imagensSrc: string,
     descricao: string,
     nomeProduto: string,

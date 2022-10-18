@@ -1,4 +1,5 @@
-export interface Usuario {
+export interface UsuarioServer {
+    
     userId: string, 
     password: string,
     confirmPass: string,

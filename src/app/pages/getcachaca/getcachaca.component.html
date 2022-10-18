@@ -3,11 +3,11 @@
   <div class="row bg-light">
     <div class="col-xs-4" >
       <div class="card borda-card " style="margin-top: 10px">
-        <a routerLink="/produtos"><img  id="idProduto1" class = "img-fluid mb-3" width="280" height="280" [src]="src" alt="product-img"></a>       
+        <a routerLink="/produtos/{{ produtoId }}"><img  id="idProduto1" class = "img-fluid mb-3" width="280" height="280" [src]="src" alt="product-img"></a>       
           <span class="onsale"></span>
           <div class="product-info">
-                <h2 class="product-title h5 mb-0"><a routerLink="/produtos/" >{{nomeProduto}} </a></h2>
-                <span id="idPrecoProduto1" class="price">{{valorProduto}}</span>
+                <h2 class="product-title h5 mb-0"><a routerLink="/produtos/{{ produtoId }}" >{{nomeProduto}} </a></h2>
+                <span id="idPrecoProduto1" class="price">{{valorProduto}} </span>
                 <span></span>
           </div>
       </div>

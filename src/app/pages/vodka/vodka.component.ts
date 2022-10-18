@@ -15,9 +15,9 @@ constructor(private vodkaService: VodkaService) { }
 
   ngOnInit(): void {
 
-    const categoria = "5";
+    const categoria = "Vodka";
     this.vodkaService.getVodka(categoria).subscribe((vodkas) => {
-      this.vodkas.push(vodkas);
+      this.vodkas = vodkas;
       console.log(vodkas);
       
       

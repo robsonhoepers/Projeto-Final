@@ -48,9 +48,10 @@ export class CadastroprodutosComponent  implements OnInit{
   cadastrar(): void{
     console.log(this.cadastroProduto.value)
     this.cadastroProdService.createProduto(this.cadastroProduto.value).subscribe(() => {
-        this.cadastroProdService.showAlert()
+        this.cadastroProdService.showAlert();
+        this.cadastroProduto.reset();        
         }
-        )};
+     )};
         
   //console.log(this.cadastroProduto.get('nomeProduto')?.value)
   

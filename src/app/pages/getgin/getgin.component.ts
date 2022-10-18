@@ -10,6 +10,7 @@ export class GetginComponent implements OnInit {
   @Input() src: string = "";
   @Input() nomeProduto: string = "";
   @Input() valorProduto: string = "";
+  @Input() produtoId: string = "";
 
   constructor() { }
 

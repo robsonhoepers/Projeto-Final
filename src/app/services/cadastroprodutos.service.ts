@@ -27,12 +27,12 @@ constructor(private httpClient: HttpClient) { }
 
     alert('Produto Deletado!')
     
-}
-showAlert3(){
+  }
+  showAlert3(){
 
   alert('Produto Alterado!')
   
-}
+  }
 
   createProduto(cadastroprodutos: ProdutoForm): Observable<Produto>{
       return this.httpClient.post<Produto>(this.url, JSON.stringify(cadastroprodutos), this.httpOptions)

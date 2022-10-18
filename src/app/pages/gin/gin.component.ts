@@ -15,9 +15,9 @@ constructor(private ginService: GinService) { }
 
   ngOnInit(): void {
 
-    const categoria = "5";
+    const categoria = "Gin";
     this.ginService.getGin(categoria).subscribe((gins) => {
-      this.gins.push(gins);
+      this.gins = gins;
       console.log(gins);
       
       

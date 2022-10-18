@@ -3,7 +3,7 @@
     <div class="overly"></div>
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-6">
+        <div class="col-lg-6 mt-5">
           <div class="title text-center">
             <h2>CADASTRO DE USUÁRIO</h2>
           </div>
@@ -16,20 +16,21 @@
       <div class="row">
         <form [formGroup] = "formUsuario">
           <div class="form-group">
+            <label for="idUserId">Nome Usuário</label>
+            <input type="text" id="idUserId" formControlName="userId" class="form-control mb-3" autocomplete="off">
+            <div *ngIf="formUsuario.get('userId')?.errors?.['required'] && formUsuario.get('userId')?.touched"  class="text-danger">
+              Nome Usuário obrigatório!
+            </div>
+          </div>
+
+          <div class="form-group">
             <label for="idNome">Nome</label>
             <input type="text" id="idNome" formControlName="nome" class="form-control mb-3" autocomplete="off">
             <div *ngIf="formUsuario.get('nome')?.errors?.['required'] && formUsuario.get('nome')?.touched"  class="text-danger">
               Nome obrigatório!
             </div>
           </div>
-  
-          <div class="form-group">
-            <label for="genero">Genero</label>
-            <input type="text" id="genero" formControlName="genero" class="form-control mb-3" autocomplete="off">
-            <div *ngIf="formUsuario.get('genero')?.errors?.['required'] && formUsuario.get('genero')?.touched"  class="text-danger">
-              Genero obrigatório!
-            </div>
-          </div>
+
   
           <div class="form-group">
             <label for="cpfCpnj">CPF/CNPJ</label>
@@ -57,20 +58,26 @@
   
           <div class="form-group">
             <label for="email">E-mail</label>
-            <input type="text" id="email" formControlName="email" mask="A*@A*.SSS" class="form-control mb-3" autocomplete="off">
+            <input type="email" id="email" formControlName="email" mask="A*@A*.SSS" class="form-control mb-3" autocomplete="off">
             <div *ngIf="formUsuario.get('email')?.errors?.['required'] && formUsuario.get('email')?.touched"  class="text-danger">
               E-mail obrigatório!
             </div>
           </div>
   
           <div class="form-group">
-            <label for="senha">Senha</label>
-            <input type="text" id="senha" formControlName="senha" class="form-control mb-3" autocomplete="off">
+            <label for="IdSenha">Senha</label>
+            <input type="password" id="IdSenha" formControlName="password" class="form-control mb-3" autocomplete="off">
+            <div *ngIf="formUsuario.get('password')?.errors?.['required'] && formUsuario.get('password')?.touched"  class="text-danger">
+              Senha Obrigatória!
+            </div>
           </div>
   
           <div class="form-group">
-            <label for="confSenha">Confirma Senha</label>
-            <input type="text" id="confSenha" formControlName="confSenha" class="form-control mb-3" autocomplete="off">
+            <label for="confSenha">Confirmar Senha</label>
+            <input type="password" id="confSenha" formControlName="confirmPass" class="form-control mb-3" autocomplete="off">
+            <div *ngIf="formUsuario.get('confirmPass')?.errors?.['required'] && formUsuario.get('confirmPass')?.touched"  class="text-danger">
+              Senha Obrigatória!
+            </div>
           </div>
   
           <div class="form-group">
@@ -83,8 +90,8 @@
   
           <div class="form-group">
             <label for="endereco">Endereço</label>
-            <input type="text" id="endereco" formControlName="endereco" class="form-control mb-3" autocomplete="off">
-            <div *ngIf="formUsuario.get('endereco')?.errors?.['required'] && formUsuario.get('endereco')?.touched"  class="text-danger">
+            <input type="text" id="endereco" formControlName="rua" class="form-control mb-3" autocomplete="off">
+            <div *ngIf="formUsuario.get('rua')?.errors?.['required'] && formUsuario.get('rua')?.touched"  class="text-danger">
               Endereço obrigatório!
             </div>
           </div>

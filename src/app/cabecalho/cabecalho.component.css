@@ -68,15 +68,34 @@
 .dp-menu ul li:hover ul {
   display: block;
 }
-.clIcone{
+
+
+.clIcone1{
   transition: all 0.5s;
   cursor: pointer;
-  display: inline-block;
-  position: relative;
-  align-content: flex-end;
-  
+  display: inline-flex;
+  margin-left: 55%;
   
 }
+
+.clIcone2{
+  transition: all 0.5s;
+  cursor: pointer;
+  display: inline-flex;
+  margin-left: 5%;
+  margin-right: 5%;
+  
+}
+
+.clIcone3{
+  transition: all 0.5s;
+  cursor: pointer;
+  display: inline-flex;
+  
+ 
+  
+}
+
 .clIcone:hover{
   
   -webkit-filter: drop-shadow(5px 10px 5px rgba(0,0,0,.5));

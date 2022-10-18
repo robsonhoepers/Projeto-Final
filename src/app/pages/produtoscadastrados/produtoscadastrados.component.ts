@@ -9,9 +9,6 @@ import { CadastroprodutosService } from 'src/app/services/cadastroprodutos.servi
   styleUrls: ['./produtoscadastrados.component.css'],
 })
 export class ProdutoscadastradosComponent implements OnInit {
- 
-  
-
 
   produtos: Produto[] = [ {
     

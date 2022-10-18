@@ -1,5 +1,6 @@
 export interface Cachaca {
-    id: String, 
+    
+    id: string, 
     imagensSrc: string,
     descricao: string,
     nomeProduto: string,

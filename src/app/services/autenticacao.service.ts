@@ -7,10 +7,17 @@ import { Usuario } from '../interfaces/usuario';
   providedIn: 'root'
 })
 export class AutenticacaoService {
+  port = "8080"
+  url = "http://localhost:" + this.port + "/usuarios"
 
-  constructor(private http: HttpClient) { }
-  //chama o usuário no db.jSon
-  getUsuario(): Observable<Usuario[]> {
-    return this.http.get<Usuario[]>("http://localhost:3000/usuarios")
+httpOptions = {
+    headers: new HttpHeaders({'Content-Type': 'application/json'})
+}
+
+  constructor(private HttpClient: HttpClient) { }
+  
+  getUsuarios(): Observable<Usuario>{
+   
+    return this.HttpClient.get<Usuario>(this.url)
   }
 }

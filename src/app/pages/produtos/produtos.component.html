@@ -1,4 +1,13 @@
-<section class="page-header">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <section class="page-header">
     <div class="overly"></div>   
     <div class="container">
       <div class="row justify-content-center">
@@ -16,33 +25,28 @@
       </div>
     </div>
   </section>
-  <section class="single-product">
+  <section class="single-product" >
     <div class="container">
-      <div class="row">
-        <div class="col-md-5">          
+      <div class="row" >
+        <div class="col-md-5" >          
             <div class="carousel-item active">
-                <img src="https://github.com/robsonhoepers/Projeto-Final/blob/main/src/assets/cachaca/Bylaardt.jpg?raw=true" alt="" class="img-fluid">
+                <img src="{{ produto.imagensSrc }}" alt="" class="img-fluid">
             </div>         
-        </div>
-        
+        </div>        
         <div class="col-md-7">
           <div class="single-product-details mt-5 mt-lg-0">
-            <h2>Cachaça Bylaardt</h2>
+            <h2>{{ produto.nomeProduto }}</h2>
             <div class="sku_wrapper mb-4">
-                <p>Cod:</p>
-                <p>AB1563456789</p> 
             </div>
-            <hr>
-            
-            <h3  class="product-price">R$89,90</h3>
-            
+            <hr>            
+            <h3 class="product-price">{{ produto.valorProduto }}</h3>            
             <p class="product-description my-4 ">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum ipsum dicta quod, quia doloremque aut deserunt commodi quis.
+              {{ produto.descricao}}
             </p>
             <form class="cart" action="#" method="post">
               <div class="quantity d-flex align-items-center">
                 <input type="number" id="#" class="input-text qty text form-control w-25 mr-3" step="1" min="1" max="9" name="quantity" value="1" title="Qty" size="4" >
-                <a href="#" class="btn btn-main btn-small">Add to cart</a>
+                <a routerLink=""  class="btn btn-secondary" >Add to cart</a>
               </div>
             </form>
           </div>
@@ -50,7 +54,34 @@
       </div>
       <div>
   </div>
-      
-
-
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!--
+  <section class="section products-main">
+ 
+          
+        <div div class="container-fluid">
+          <div class="row bg-light ">
+            <div class="col d-flex flex-wrap ">             
+              <app-getproduto *ngFor="let produto of produtos" 
+                          [src]="produto.imagensSrc" 
+                          [nomeProduto] = "produto.nomeProduto" 
+                          [valorProduto] = "produto.valorProduto"
+                          
+                          
+                          >
+              </app-getproduto>  
+           
+              </div>   
+          </div>
+        </div>
+</section>-->

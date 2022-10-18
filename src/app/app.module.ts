@@ -45,6 +45,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { ProdutoupdateComponent } from './pages/produtoupdate/produtoupdate.component';
+import { GetprodutoComponent } from './pages/getproduto/getproduto.component';
 
 
 
@@ -81,7 +82,8 @@ import { ProdutoupdateComponent } from './pages/produtoupdate/produtoupdate.comp
     GetginComponent,
     GetkitsComponent,
     GetvodkaComponent,
-    ProdutoupdateComponent
+    ProdutoupdateComponent,
+    GetprodutoComponent
     
     
     

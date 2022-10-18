@@ -1,7 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Produto } from '../interfaces/cadastroprodutos';
 import { Cerveja } from '../interfaces/cerveja';
 
 @Injectable({
@@ -18,8 +17,9 @@ httpOptions = {
 
   constructor(private HttpClient: HttpClient) { }
   
-  getCerveja(categoria: string): Observable<Produto>{
-    return this.HttpClient.get<Produto>(this.url + "/" + categoria)
+  getCerveja(categoria: string): Observable<Cerveja[]>{
+    return this.HttpClient.get<Cerveja[]>(this.url + "?categoria=" + categoria)
+       
   }
   
 }

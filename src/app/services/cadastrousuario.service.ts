@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { UrlSerializer } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -8,31 +8,34 @@ import { Usuario } from 'src/app/interfaces/usuario';
   providedIn: 'root'
 })
 export class CadastroUsuarioService {
-  value(value: any) {
-    throw new Error('Method not implemented.');
-  }
 
-  cadastroServer = "http://localhost:3001/usuario"
+  port = "8080"
+  url = "http://localhost:" + this.port + "/usuarios"
 
-  constructor(private http: HttpClient) { }
+  httpOptions = {
+  headers: new HttpHeaders({'Content-Type': 'application/json'})
+}
 
-  usuarios: Array<Usuario> = new Array<Usuario>();
+  constructor(private httpClient: HttpClient) { }
+
   showAlert(){
     alert('Usuário Cadastrado!')
   }
 
   cadastrarUsuario(usuario: Usuario): Observable<Usuario>{
-    usuario.codUsuario = '1';
-    this.usuarios.concat(usuario);
-      return this.http.post<Usuario>(this.cadastroServer, usuario)
+      return this.httpClient.post<Usuario>(this.url, JSON.stringify(usuario), this.httpOptions)
   }
 
-  salvar(usuario: Usuario): Observable<Usuario>{
-    return this.http.post<Usuario>(this.cadastroServer, usuario)
+  update(usuario: Usuario): Observable<Usuario>{
+    return this.httpClient.put<Usuario>(this.url + "/" + usuario.userId, JSON.stringify(usuario), this.httpOptions)
   }
 
-  getUsuario(id: String) {
-    return this.usuarios.find(user => user.codUsuario == id);
+  readById(userId: String) {
+    return this.httpClient.get<Usuario>(this.url + "/" + userId)
+  }
+
+  delete(userId: string): Observable<Usuario>{    
+    return this.httpClient.delete<Usuario>(this.url + "/" + userId, this.httpOptions)
   }
 
   }

@@ -12,16 +12,18 @@ import { CachacaService } from 'src/app/services/cachaca.service';
 
 export class CachacaComponent  implements OnInit{
   
-  cachacas: Cachaca [] = []
+  cachacas: Cachaca [] = [];
 
 constructor(private cachacaService: CachacaService) { }
 
   ngOnInit(): void {
 
-    const categoria = "5";
+    const categoria = "Cachaça";
     this.cachacaService.getCachaca(categoria).subscribe((cachacas) => {
-      this.cachacas.push(cachacas);
-      console.log(cachacas.id);
+      this.cachacas = cachacas;
+      console.log(cachacas);
+      console.log();
+      
    });
    console.log(this.cachacas);
   }

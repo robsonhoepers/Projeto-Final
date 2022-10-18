@@ -1,14 +1,13 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Cachaca } from '../interfaces/cachaca';
-
+import { Produto } from '../interfaces/cadastroprodutos';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CachacaService {
- 
+export class KitsService {
+
   port = "8080"
   url = "http://localhost:" + this.port + "/produtos"
 
@@ -18,10 +17,7 @@ httpOptions = {
 
   constructor(private HttpClient: HttpClient) { }
   
-  getCachaca(categoria: string): Observable<Cachaca[]>{
-    console.log("log service " + categoria);
-    console.log(this.url + "?categoria=" + categoria);
-    
-    return this.HttpClient.get<Cachaca[]>(this.url + "?categoria=" + categoria)
+  getKits(categoria: string): Observable<Produto>{
+    return this.HttpClient.get<Produto>(this.url + "?categoria=" + categoria)
   }
 }

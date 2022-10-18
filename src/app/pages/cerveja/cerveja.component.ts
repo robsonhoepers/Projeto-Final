@@ -16,11 +16,10 @@ constructor(private cervejaService: CervejaService) { }
 
   ngOnInit(): void {
 
-    const categoria = "5";
+    const categoria = "Cerveja";
     this.cervejaService.getCerveja(categoria).subscribe((cervejas) => {
-      this.cervejas.push(cervejas);
-      console.log(cervejas);
-      
+      this.cervejas = cervejas;
+      console.log(cervejas); 
       
    });
   }

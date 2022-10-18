@@ -1,58 +1,50 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Usuario } from '../interfaces/usuario';
+import { UsuarioServer } from '../interfaces/usuarioServer';
 import { UsuarioService } from '../services/usuario.service';
 
 @Component({
   selector: 'app-autenticacao',
   templateUrl: './autenticacao.component.html',
   styleUrls: ['./autenticacao.component.css']
+
 })
+
+
+
 export class AutenticacaoComponent implements OnInit {
+
+  
 
       usuario: Usuario = {
         userId: "", 
         password: "",
-        tipo: "",
-        codUsuario: "",
+        confirmPass: "",
         nome: "",
-        genero: "",
         cpfCpnj: "",
         telefone: "",
         dataNascimento:"",
         email: "",
-        cep: "",
-        endereco: "",
-        cidade: "",
-        bairro: "",
-        uf: "",
-        complemento: "",
-        alterarSenha: "",
-    }
-    usuarioServer: Usuario = {
+        endId: 0
+    };
+
+    usuarioServer: UsuarioServer = {
       userId: "", 
       password: "",
-      tipo: "",
-      codUsuario: "",
+      confirmPass:"",
       nome: "",
-      genero: "",
       cpfCpnj: "",
       telefone: "",
       dataNascimento:"",
       email: "",
-      cep: "",
-      endereco: "",
-      cidade: "",
-      bairro: "",
-      uf: "",
-      complemento: "",
-      alterarSenha: "",
+      endId: 0
     }
 
   constructor(private usuarioService: UsuarioService, private router: Router ){}
 
   ngOnInit(): void {
-    
+
   }
 
     spinner: boolean = false
@@ -65,7 +57,7 @@ export class AutenticacaoComponent implements OnInit {
     public login(){
 
     this.spinner = true;
-    this.usuarioService.getUsuario().subscribe((user) => (this.usuarioServer = user[0]))
+    this.usuarioService.getUsuarios().subscribe(() => (this.usuarioServer))
     console.log(this.usuarioService);
 
     setTimeout(() => {

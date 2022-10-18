@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Pipe } from '@angular/core';
 
 
 
@@ -16,7 +16,7 @@ export class GetcachacaComponent implements OnInit {
   @Input() src: string = "";
   @Input() nomeProduto: string = "";
   @Input() valorProduto: string = "";
-  @Input() id: string = "";
+  @Input() produtoId: string = "";
   
 
   constructor() {
