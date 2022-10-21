@@ -7,6 +7,7 @@ import { Usuario } from '../interfaces/usuario';
   providedIn: 'root'
 })
 export class UsuarioService {
+  [x: string]: any;
 
   port = "8080"
   url = "http://localhost:" + this.port + "/usuarios"

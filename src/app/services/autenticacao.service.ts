@@ -15,9 +15,9 @@ httpOptions = {
 }
 
   constructor(private HttpClient: HttpClient) { }
-  
-  getUsuarios(): Observable<Usuario>{
-   
-    return this.HttpClient.get<Usuario>(this.url)
+
+  readById(userId: string) {
+    console.log(userId);
+    return this.HttpClient.get<Usuario>(this.url + "/" + userId)
   }
-}
+  }

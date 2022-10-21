@@ -24,10 +24,10 @@
           </div>
   
           <div class="form-group">
-            <label for="cpfCpnj">CPF/CNPJ</label>
-            <input type="text" id="cpfCpnj" formControlName="cpfCnpj" mask="CPF_CNPJ" class="form-control mb-3" autocomplete="off">
-            <div *ngIf="formDadosUsuario.get('cpfCpnj')?.errors?.['required'] && formDadosUsuario.get('cpfCpnj')?.touched"  class="text-danger">
-              CPF/CNPJ obrigatório!
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" formControlName="cpf" mask="CPF" class="form-control mb-3" autocomplete="off">
+            <div *ngIf="formDadosUsuario.get('cpf')?.errors?.['required'] && formDadosUsuario.get('cpf')?.touched"  class="text-danger">
+              CPF obrigatório!
             </div>
           </div>
   
@@ -41,8 +41,8 @@
   
           <div class="form-group">
             <label for="dataNascimento">Data Nascimento</label>
-            <input matInput placeholder="DD/MM/YYYY" [maxlength]="10" inputDateMask  id="dataNascimento" formControlName="dataNascimento" mask="00/00/0000" class="form-control mb-3" autocomplete="off">
-            <div *ngIf="formDadosUsuario.get('dataNascimento')?.errors?.['required'] && formDadosUsuario.get('dataNascimento')?.touched"  class="text-danger">
+            <input matInput placeholder="DD/MM/YYYY" [maxlength]="10" inputDateMask  id="dataNascimento" formControlName="dataNasc" mask="00/00/0000" class="form-control mb-3" autocomplete="off">
+            <div *ngIf="formDadosUsuario.get('dataNasc')?.errors?.['required'] && formDadosUsuario.get('dataNasc')?.touched"  class="text-danger">
               Data Nascimento obrigatório!
             </div>
           </div>

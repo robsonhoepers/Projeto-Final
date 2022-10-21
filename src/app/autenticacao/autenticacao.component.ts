@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Usuario } from '../interfaces/usuario';
 import { UsuarioServer } from '../interfaces/usuarioServer';
+import { AutenticacaoService } from '../services/autenticacao.service';
 import { UsuarioService } from '../services/usuario.service';
 
 @Component({
@@ -22,9 +23,9 @@ export class AutenticacaoComponent implements OnInit {
         password: "",
         confirmPass: "",
         nome: "",
-        cpfCpnj: "",
+        cpf: "",
         telefone: "",
-        dataNascimento:"",
+        dataNasc:"",
         email: "",
         endId: 0
     };
@@ -34,14 +35,15 @@ export class AutenticacaoComponent implements OnInit {
       password: "",
       confirmPass:"",
       nome: "",
-      cpfCpnj: "",
+      cpf: "",
       telefone: "",
-      dataNascimento:"",
+      dataNasc:"",
       email: "",
       endId: 0
     }
+  
 
-  constructor(private usuarioService: UsuarioService, private router: Router ){}
+  constructor(private autenticasaoService: AutenticacaoService, private router: Router ){}
 
   ngOnInit(): void {
 
@@ -55,44 +57,56 @@ export class AutenticacaoComponent implements OnInit {
 
 
     public login(){
-
+    
+  
+    const userId = this.usuario.userId
+    console.log(userId);
     this.spinner = true;
-    this.usuarioService.getUsuarios().subscribe(() => (this.usuarioServer))
-    console.log(this.usuarioService);
+    this.autenticasaoService.readById(userId).subscribe((usuario) => {
+    this.usuarioServer = usuario
+    this.testarUser()
+    console.log(this.usuarioServer);
+
+  });
 
     setTimeout(() => {
-        this.spinner = false;
+      this.spinner = false
+    }, 3000);
+  }
+    
+    public testarUser() { 
 
     if (this.contTentativa <= 3) {
     
       
-    if (this.usuario.userId ==  "XPTO-21" && this.usuario.password == "Trocar@123") {
-          this.msn = "Logado!"
-          this.class = "clGreen"
-          localStorage['token'] = "true"                  
-          this.router.navigate(['/usuario']);        
       
-        } else if(this.usuario.userId ==  "admin" && this.usuario.password == "admin123"){
-          this.msn = "Logado!"
-          this.class = "clGreen"   
-          localStorage['token'] = "adminOn"                
-          this.router.navigate(['/administrativo']);
+      if(this.usuario.userId ==  "admin" && this.usuario.password == "admin123"){
+        this.msn = "Logado!"
+        this.class = "clGreen"   
+        localStorage['token'] = "true"                
+        this.router.navigate(['/administrativo']);
+        
+      } else if (this.usuario.userId == this.usuarioServer.userId && this.usuario.password == this.usuarioServer.password) {
+        this.msn = "Logado!"
+        this.class = "clGreen"
+        localStorage['token'] = "true"                  
+        this.router.navigate(['/usuario']);
           
-          } else if (this.usuario.userId !=  "XPTO-21" && this.usuario.password == "Trocar@123") {
+          } else if (this.usuario.userId !=  this.usuarioServer.userId && this.usuario.password == this.usuarioServer.password) {
             this.msn = "Acesso negado, usuário incorreto"
             this.class = "clRed"       
             } 
-                else if (this.usuario.userId ==  "XPTO-21" && this.usuario.password != "Trocar@123") {
+                else if (this.usuario.userId ==  this.usuarioServer.userId && this.usuario.password != this.usuarioServer.password) {
                   this.msn = "Acesso negado, senha incorreta"
                   this.class = "clRed"
                 }
 
-                else if (this.usuario.userId !==  "XPTO-21" && this.usuario.password != "Trocar@123") {
+                else if (this.usuario.userId !==  this.usuarioServer.userId && this.usuario.password != this.usuarioServer.password) {
                     this.msn = "Acesso negado, usuário ou senha incorreta"
                     this.class = "clRed"
                     }
                 
-                    else  if (this.contTentativa >= 2 && this.usuario.userId !=  "XPTO-21" && this.usuario.password != "Trocar@123" ) { 
+                    else  if (this.contTentativa >= 2 && this.usuario.userId !=  this.usuarioServer.userId && this.usuario.password != this.usuarioServer.password ) { 
                         this.msn = "Usuário Bloqueado!" 
                         this.class = "clRed"
                     }
@@ -100,6 +114,7 @@ export class AutenticacaoComponent implements OnInit {
                     this.contTentativa++
                 }
             
-            }, 1000); 
+            };
+          
 }
-}
+ 

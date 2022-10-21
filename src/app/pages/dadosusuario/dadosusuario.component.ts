@@ -22,9 +22,9 @@ export class DadosusuarioComponent implements OnInit {
 
       this.formDadosUsuario = this.formBuilder.group({
         nome: ['', [Validators.required]],
-        cpfCnpj: ['', [Validators.required]],
+        cpf: ['', [Validators.required]],
         telefone: ['', [Validators.required]],
-        dataNascimento: ['', [Validators.required]],
+        dataNasc: ['', [Validators.required]],
         email: ['', [Validators.required, Validators.email]],
         cep: ['', [Validators.required]],
         endereco: ['', [Validators.required]],

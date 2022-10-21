@@ -31,9 +31,9 @@ export class CadastrousuarioComponent {
         password: ['', [Validators.required]],
         confirmPass: ['', [Validators.required]],
         nome: ['', [Validators.required]],
-        cpfCnpj: ['', [Validators.required]],
+        cpf: ['', [Validators.required]],
         telefone: ['', [Validators.required]],
-        dataNascimento: ['', [Validators.required]],
+        dataNasc: ['', [Validators.required]],
         email: ['', [Validators.required, Validators.email]],
         cep: ['', [Validators.required]],
         rua: ['', [Validators.required]],
@@ -61,9 +61,9 @@ export class CadastrousuarioComponent {
           password: '',
           confirmPass: '',
           nome: '',
-          cpfCpnj: '',
+          cpf: '',
           telefone: '',
-          dataNascimento: '',
+          dataNasc: '',
           email: '',
           endId: 0
 
@@ -92,9 +92,9 @@ export class CadastrousuarioComponent {
       this.usuario.password = this.formUsuario.get('password')?.value;
       this.usuario.confirmPass = this.formUsuario.get('confirmPass')?.value;
       this.usuario.nome = this.formUsuario.get('nome')?.value;
-      this.usuario.cpfCpnj = this.formUsuario.get('cpfCpnj')?.value;
+      this.usuario.cpf = this.formUsuario.get('cpf')?.value;
       this.usuario.telefone = this.formUsuario.get('telefone')?.value;
-      this.usuario.dataNascimento = this.formUsuario.get('dataNascimento')?.value;
+      this.usuario.dataNasc = this.formUsuario.get('dataNasc')?.value;
       this.usuario.email = this.formUsuario.get('email')?.value;
 
       //chama cadastro do usuario
@@ -103,6 +103,7 @@ export class CadastrousuarioComponent {
         
         this.cadastroUsuarioService.showAlert();
         this.formUsuario.reset();
+        this.router.navigate(['/'])
         ;
       });
     });

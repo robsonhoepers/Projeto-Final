@@ -23,7 +23,7 @@ export class UsuarioComponent implements OnInit {
    * readLocalStorageToken
    */
   public readLocalStorageToken() {
-    if (localStorage['token'] === 'adminOn'){
+    if (localStorage['token'] === 'true'){
       return true
     } else {
       return false

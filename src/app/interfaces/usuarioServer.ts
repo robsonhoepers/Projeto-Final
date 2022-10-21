@@ -4,9 +4,9 @@ export interface UsuarioServer {
     password: string,
     confirmPass: string,
     nome: string,
-    cpfCpnj: string,
+    cpf: string,
     telefone: string,
-    dataNascimento: string,
+    dataNasc: string,
     email: string,
     endId: number
   
